@@ -1,0 +1,21 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <link rel="stylesheet" href="{% static 'style.css' %}">
+    <meta charset="UTF-8">
+    <title>Home</title>
+    <h1>This is home page Access POST Method</h1>
+</head>
+<body>
+<form method="post" action="other">
+    {% csrf_token %}
+
+            <textarea name="text" rows="2" col="5" placeholder="Enter any words"></textarea>
+            <br></br>
+            <input type="submit" class="btn btn-success"/>
+
+        </form>
+
+</body>
+</html>

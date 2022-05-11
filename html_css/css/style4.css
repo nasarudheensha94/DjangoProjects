@@ -1,0 +1,43 @@
+/*----hover effect for button---*/
+button:hover{
+    background-color:coral;
+    border: 2px solid red;
+    padding: 10px;
+}
+
+/*----hover effect for letter---*/
+/*--p:hover{
+    font-size: 25px;
+}--*/
+
+
+/*----focus effect will active when we focus/touch the element---*/
+input:focus{
+    background-color:silver;
+    border: 2px solid red;
+}
+
+/*---=========sudo class properties ( :)=========--*/
+
+div p:nth-child(odd){ /*----we can use p:second-child,p:last-child,p:nth-child(2/3/4)---*/
+    /*--also we can use even or odd possitions using p:nth-child(odd/even)---*/
+    color:red;
+    background-color:black;
+    padding: 15px;
+}
+
+
+/*---=========sudo class elements (::) =========--*/
+
+.sudo-elements p::first-letter {
+    color: red;
+    font-size: 25px;
+    
+}
+
+
+/*---=========sudo class elements (::) before/after=========--*/
+.b4-after p::before{
+    content: "Hello ";
+
+} 

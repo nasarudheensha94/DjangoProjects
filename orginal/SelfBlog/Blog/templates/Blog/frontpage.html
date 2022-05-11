@@ -1,0 +1,15 @@
+{% extends 'Blog/base.html' %}
+
+{% block content %}
+    {% for post in posts %} <!--from Views page frontpage arguments for database fetch-->
+        <div class="post block">
+            <h2 class="subtitle">{{ post.title }}</h2><!--this title refers from models.py > title property-->
+
+            <small>Posted at {{ post.date_added }}</small><!--this title refers from models.py > date_added property-->
+
+            <p>{{ post.intro }}</p><!--this title refers from models.py > intro property-->
+
+          <a href="{% url 'post_detail' post.slug %}">Read more</a><!--it will automaticaly generate to ulrls.py > path(<slug:slsug>-->
+        </div>
+    {% endfor %}
+{% endblock %}l>

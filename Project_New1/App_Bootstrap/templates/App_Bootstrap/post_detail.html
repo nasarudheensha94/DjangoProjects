@@ -1,0 +1,15 @@
+{% extends 'App_Bootstrap/base.html' %}
+
+{% block content %}
+    <br>
+    <br>
+    <br>
+    <h1 class="title">{{ post.title }}</h1>
+
+    <small>Posted at {{ post.date_added }}</small>
+
+    <p><strong>{{ post.intro }}</strong></p>
+
+    <p>{{ post.body }}</p>
+
+{% endblock %}

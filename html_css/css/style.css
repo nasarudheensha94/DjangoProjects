@@ -1,0 +1,27 @@
+body{
+    margin: 0;
+    /*--top to bottom order--*/
+    /*--it (color:red property) will affect entire div and other tags if there is not mentined color--*/
+    color: red;
+}
+h1{
+    /*--margin = between content distances--*/
+    /*--margin = outer areas --*/
+    /*--padding = inner areas --*/
+    margin: 0;
+    padding: 10px;
+    padding-top: 50px;
+    margin-left: 15px;
+    color: dodgerblue;
+}
+header{
+    background-color:black;
+}
+div{
+    width: 100%;
+    height: 200px;
+    background-color:pink;
+    /*-border: 1px solid RED;--*/
+    border-top: 2px solid black;
+    border-left: 2px solid blue;
+}

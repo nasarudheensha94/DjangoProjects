@@ -1,0 +1,50 @@
+{% extends 'App_Bootstrap/base.html' %}
+
+{% block content %}
+    {% for post in posts %}
+
+<style>
+   h1{
+     font-size: 20px;
+      color:Yellow;
+    }
+    h2 {
+      font-size: 35px;
+    }
+
+    p{
+      font-size: 20px;
+    }
+  #logout{
+    position: relative;
+    top: 0;
+     right: 0;
+    float: right;
+
+
+    }
+    .navbar-item{
+        align:center;
+    }
+
+
+    </style>
+
+        <div class="post block">
+            <br>
+            <br>
+            <h2 class="subtitle">{{ post.title }}</h2>
+            <!--From Models.py title field--->
+
+            <small>Posted at {{ post.date_added }}</small>
+            <!--From Models.py date_added field--->
+
+            <p>{{ post.intro }}</p>
+
+            <a href="{% url 'post_detail' post.slug %}">Read more</a>
+            <!--It will automaticaly generate from urls.py path('<slug:slug', -->
+        </div>
+    {% endfor %}
+{% endblock %}
+
+

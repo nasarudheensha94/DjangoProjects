@@ -1,0 +1,52 @@
+body {
+  margin: 0;
+}
+
+h1 {
+  margin: 0;
+}
+
+.container {
+  background-color: lightblue;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  /*--this will make row print---*/
+  /*--flex-direction: row-reverse;--Oposite direction div-*/
+  /*--flex-direction: column;--colum pole print cheyyum top to down-*/
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: row;
+          flex-direction: row;
+  flex-direction: column;
+  /*--it need like colum then use this---*/
+  /*--justify-content: center; ---all raw will be fit on center--*/
+  /*--justify-content: space-evenly; /*--between ray will be same space-*/
+  height: 400px;
+  /*-- align-items: center; /*---here you can use flex-start /flex-end---*/
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
+  /*---every resize browser it will break to next line--*/
+}
+
+.one, .two, .three {
+  width: 300px;
+  /*--flex: 1; /*this willbe fit all raws in same width--*/
+  /*-- width: 300px;--width not mentioned -*/
+  /*--height: 200px; /*----if raw need in entire container then disable height--*/
+  background-color: orange;
+  border: 1px solid white;
+  text-align: center;
+  padding: 5px;
+}
+
+/*----if you need to expand size of any other section follow below--*/
+/*.three{ /*-----three section becomes bigger space than others--*/
+/*-  flex: 2;
+}--*/
+.three {
+  -webkit-box-flex: 1;
+      -ms-flex: 1;
+          flex: 1;
+}
+/*# sourceMappingURL=main.css.map */
