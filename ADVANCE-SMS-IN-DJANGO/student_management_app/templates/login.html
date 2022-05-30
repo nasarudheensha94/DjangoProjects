@@ -1,0 +1,168 @@
+{% extends 'base.html' %}
+
+
+{% block content %}
+
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+   <!--https://www.youtube.com/watch?v=Y2m0_ElV-78---->
+    <link rel="stylesheet" href="static/dist/css/variables.css">
+    <link rel="stylesheet" href="static/dist/css/style15.css">
+
+    <title>Debu-Media</title>
+</head>
+<body>
+    <header class="Hero">
+        <div class="container">
+            <a href="#"><strong>Benchmarks</strong></a>
+
+            <nav class="Nav-bar">
+                <a href="#">Home</a>
+                <a href="https://schools.org.in/malappuram/32050600660/bench-mark-international-school.html">About</a>
+                <a href="http://benchmarksschool.org/contact-us/">Contact</a>
+                <a href="https://schools.org.in/schools-in-india.html">Branches</a>
+
+            </nav>
+
+        </div>
+    </header>
+    
+    <main><!-- here contains except heading and footer-->
+        <section class="banner-container">
+            <div class="container">
+                <div class="left-section">
+                    <h1>Welcome to <span>Benchmarks School</span></h1>
+                    <p>Benchmarks International School is one of the leading CBSE affiliated schools in Malappuram Dist(Affiliation No: 931189). of Kerala where the children find learning a joyful experience. The school has classes from Montessori up to Grade 10. The special facilities provided by the school along with the intervention of qualified and experienced teachers  ensure a holistic development of the children. As the name suggests, the school aims to create a ‘benchmark’ for all similar institutions in terms of quality, and excellence in holistic education.
+                    </p>
+
+                    <button href="{% url 'login1' %}">Admin</button>
+
+                </div>
+                <div class="right-section"><!--for form area-->
+                    <h4>Signin Here</h4>
+
+                    <form action="{% url 'doLogin' %}" method="POST"><!--auto compleate for empty form without history---->
+                         {% csrf_token %}
+                        <!--<div class="input-group">
+                            <input type="text" id="name" required/>
+                            <label for="name">Name</label>
+                        </div>-->
+                        <div class="input-group">
+                            <input type="email" class="form-control"  name="email" required>
+                            <label>E-Mail</label>
+                        </div>
+                        <div class="input-group">
+                            <input type="password" class="form-control"  name="password" required>
+                            <label >Password</label>
+                        </div>
+
+                        <div class="submit-section">
+                             <button type="submit" class="submit-button">Sign In</button>
+                        </div>
+
+                        <!--<div class="submit-section">
+                            <input type="submit" class="submit-button" />
+                        </div>--->
+                        {% comment %} <div class="col-12 text-center">
+            <a href="{% url 'password_reset' %}">Reset Password</a>
+          </div>  {% endcomment %}
+
+          {% comment %} Display Messages {% endcomment %}
+          {% if messages %}
+          <div class="col-12">
+            {% for message in messages %}
+              {% if message.tags == "error" %}
+                <div class="alert alert-danger alert-dismissible fade show" role="alert" style="margin-top: 10px;">
+                  {{ message }}
+                  <button type="button" class="close" data-dismiss="alert" aria-label="Close">
+                    <span aria-hidden="true">&times;</span>
+                  </button>
+                </div>
+              {% endif %}
+            {% endfor %}
+          </div>
+          {% endif %}
+
+          <!-- /.col -->
+
+                    </form>
+                </div>
+                
+
+            </div>
+
+
+        </section>
+<!----section two start-->
+        <br>
+        <br>
+        <div Class="section-h1">
+            <h1>Our Facualties</h1>
+        </div>
+
+<br>
+
+<h4>Each faculty member is responsible for the quality and content of instruction in the classroom. The instructor should at all times strive to promote the general purposes of the University and to achieve the objectives of the College.
+           Combine scholarship and research in the faculty member's major field of interest and incorporate the latest research, knowledge, and theory in classroom instruction.
+            Seek new and better devices, techniques, online technologies, procedures, and methods that may improve the teaching and learning process.
+            Recognize individual needs of students and provide challenging learning opportunities for all learners.
+            Recognize and provide academic and career guidance and encouragement through formal and informal conferences with students in order to supplement and improve the regular classroom instruction.
+            Develop efficient and equitable procedures for the evaluation of student academic performance and assign grades that reflect the achievement and progress of students enrolled in the courses. Provide timely and appropriate feedback to students.</h4>
+
+
+        <section class="section-two">
+
+
+           <div class="card-container">
+              <div class="image-container">
+                <img src="static/dist/img/pexels-dellon-thomas-1405963.jpg" alt="">
+              </div>
+              <h1>Prof:Smith Brian</h1>
+               <h4>Math professor</h4>
+            </div>
+
+           <div class="card-container">
+              <div class="image-container">
+                <img src="static/dist/img/pexels-mohamed-abdelghaffar-764529.jpg" alt="">
+              </div>
+              <h1>Prof:Aisha Hiba</h1>
+               <h4>Computer Science</h4>
+            </div>
+
+
+              <div class="card-container">
+
+              <div class="image-container">
+                <img src="static/dist/img/pexels-nitin-khajotia-1486064.jpg" alt="">
+              </div>
+              <h1>Prof:Arun Krishna</h1>
+               <h4>History professor</h4>
+            </div>
+
+
+             <div class="card-container">
+
+              <div class="image-container">
+                <img src="static/dist/img/shan1.jpg" alt="">
+              </div>
+              <h1>Prof:Nasarudheen</h1>
+               <h4>Information Tech</h4>
+            </div>
+
+
+        </section>
+        <!----section two End-->
+
+        
+    </main>
+
+    <footer> <!----Footer start-->
+        Designed and Devoloped by: <span>VM Nasarudheensha</span>
+    </footer>
+
+</body>
+</html>
+ {% endblock %}
