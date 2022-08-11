@@ -1,11 +1,12 @@
 
 from django.urls import path, include
 from . import views
+from django.contrib import admin
 from .import HodViews, StaffViews, StudentViews
 
 
 urlpatterns = [
-
+    path('admin/', admin.site.urls),
     path('', views.loginPage, name="login"),
     path('login1',views.login1, name="login1"),
     # path('accounts/', include('django.contrib.auth.urls')),
